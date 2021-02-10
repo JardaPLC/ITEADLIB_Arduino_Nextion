@@ -44,6 +44,15 @@ public: /* methods */
      * @retval false - failed. 
      */
     bool getValue(uint32_t *number);
+
+    /**
+     * Get number attribute of component.
+     *
+     * @param number - buffer storing text returned. 
+     * @param pageName[] - name of page
+     * @return The real length of text returned. 
+     */
+    bool getValue(uint32_t *number, char pageName[]);
     
     /**
      * Set the value of slider.

@@ -42,6 +42,16 @@ public: /* methods */
      * @return The real length of text returned. 
      */
     bool getValue(uint32_t *number);
+
+
+    /**
+     * Get number attribute of component.
+     *
+     * @param number - buffer storing text returned. 
+     * @param pageName[] - name of page
+     * @return The real length of text returned. 
+     */
+    bool getValue(uint32_t *number, char pageName[]);
     
     /**
      * Set number attribute of component.
@@ -50,6 +60,16 @@ public: /* methods */
      * @return true if success, false for failure. 
      */
     bool setValue(uint32_t number);
+
+        
+    /**
+     * Set number attribute of component.
+     *
+     * @param number - number buffer. 
+     * @param pageName pageName
+     * @return true if success, false for failure. 
+     */
+    bool setValue(uint32_t number, char pageName[]);
 	
     /**
      * Get bco attribute of component

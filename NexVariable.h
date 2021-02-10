@@ -65,6 +65,15 @@ public: /* methods */
      * @return the length of the data 
      */
     uint32_t getValue(uint32_t *number);
+
+    /**
+     * Get val attribute of component
+     *
+     * @param number - buffer storing data retur
+     * @param pageName - pageName
+     * @return the length of the data 
+     */
+    uint32_t getValue(uint32_t *number, char pageName[]);
 	
     /**
      * Set val attribute of component

@@ -28,6 +28,17 @@ bool NexSlider::getValue(uint32_t *number)
     return recvRetNumber(number);
 }
 
+bool NexSlider::getValue(uint32_t *number, char pageName[])
+{
+    String cmd = String("get ");
+    cmd += pageName;
+    cmd += ".";
+    cmd += getObjName();
+    cmd += ".val";
+    sendCommand(cmd.c_str());
+    return recvRetNumber(number);
+}
+
 bool NexSlider::setValue(uint32_t number)
 {
     char buf[10] = {0};
