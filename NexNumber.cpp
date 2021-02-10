@@ -39,6 +39,18 @@ bool NexNumber::getValue(uint32_t *number, char pageName[])
     return recvRetNumber(number);
 }
 
+bool NexNumber::setValue(uint32_t number)
+{
+    char buf[10] = {0};
+    String cmd;
+    utoa(number, buf, 10);
+    cmd += getObjName();
+    cmd += ".val=";
+    cmd += buf;
+    sendCommand(cmd.c_str());
+    return recvRetCommandFinished();
+}
+
 bool NexNumber::setValue(uint32_t number, char pageName[])
 {
     char buf[10] = {0};
